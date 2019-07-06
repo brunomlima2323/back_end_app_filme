@@ -9,7 +9,7 @@
 		$usuario = mysqli_real_escape_string($conexao, $_POST['usuario']);
 		$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 		
-		$query = "insert into usuarios values ('', '" . $_POST['usuario'] . "' , md5('" . $_POST['senha'] ."'));";
+		$query = "insert into usuarios values (null, '" . $_POST['usuario'] . "' , md5('" . $_POST['senha'] ."'));";
 		$result = mysqli_query($conexao, $query);
 		echo json_encode($result);
 		/*$total = mysqli_num_rows($result);
