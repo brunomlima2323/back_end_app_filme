@@ -19,7 +19,7 @@
 		if ($n_linhas == 0){
 			//filmes não existe no banco de dados, precisa cadastrar antes
 			echo "filme não existe no banco de dados, precisa cadastrar antes";
-			$query = "insert into filmes values('". $filme_id ."', 'filmeteste');";
+			$query = "insert into filmes values('". $filme_id ."');";
 			$result = mysqli_query($conexao, $query);
 			echo json_encode($result);
 		}else{
